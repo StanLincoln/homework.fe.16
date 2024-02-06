@@ -1,0 +1,251 @@
+.form {
+  margin: 60px 100px;
+
+  &__container {
+    max-width: 1315px;
+    padding: 0 15px;
+    margin: 0 auto;
+    display: flex;
+    gap: 25px;
+  }
+
+  &__title {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 54px;
+    margin-bottom: 35px;
+  }
+
+  &__block {
+    display: flex;
+    gap: 25px;
+  }
+
+  &__input {
+    max-width: 608px;
+    width: 100%;
+    padding: 35px 79px 71px 76px;
+
+    display: flex;
+    flex-direction: column;
+
+    & input,
+    select {
+      border: 1px solid rgb(159, 159, 159);
+      border-radius: 10px;
+      padding: 25px 30px;
+      font-family: Poppins;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      color: rgb(159, 159, 159);
+      margin-bottom: 36px;
+      width: 100%;
+    }
+  }
+
+  &__error {
+    color: red;
+    margin-bottom: 20px;
+  }
+}
+
+.input__name {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.firstname,
+.lastname {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 22px;
+}
+
+input::placeholder {
+  color: rgb(159, 159, 159);
+}
+
+.submit {
+  width: 100%;
+  padding: 87px 37px 86px 36px;
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 14px;
+  }
+
+  &__sofa {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 22px;
+    & p span {
+      color: rgb(159, 159, 159);
+      font-weight: 400;
+    }
+    & p.price {
+      font-weight: 300;
+    }
+  }
+
+  &__subtotal {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 22px;
+    & p {
+      font-weight: 400;
+    }
+    & p.price {
+      font-weight: 300;
+    }
+  }
+
+  &__total {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 39px;
+    border-bottom: 1px solid rgb(217, 217, 217);
+    margin-bottom: 23px;
+    align-items: center;
+    font-weight: 400;
+    & p span {
+      color: rgb(184, 142, 47);
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 36px;
+    }
+  }
+}
+
+.radio {
+  input[type="radio"] {
+    margin-right: 15px;
+    vertical-align: middle;
+  }
+
+  input[type="radio"] {
+    display: none;
+  }
+
+  input[type="radio"] + label {
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+  }
+
+  input[type="radio"] + label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 14px;
+    height: 14px;
+    border: 1px solid rgb(159, 159, 159);
+    border-radius: 50%;
+    background-color: #fff;
+    transition: background-color 0.3s;
+  }
+
+  input[type="radio"]:checked + label::before {
+    background-color: #000;
+  }
+
+  input[type="radio"]:not(:checked) + label,
+  input[type="radio"]:not(:checked) {
+    color: rgb(159, 159, 159);
+    font-weight: 500;
+    line-height: 24px;
+  }
+  &.bank {
+    margin-bottom: 11px;
+  }
+
+  &__text {
+    margin-top: 11px;
+    margin-bottom: 25px;
+    font-weight: 300;
+    line-height: 24px;
+    color: rgb(159, 159, 159);
+  }
+
+  &__description {
+    margin-top: 22px;
+    margin-bottom: 39px;
+    font-weight: 300;
+    line-height: 24px;
+    & span {
+      font-weight: 600;
+    }
+  }
+}
+
+button {
+  padding: 17px 102px;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 15px;
+  background-color: transparent;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  cursor: pointer;
+}
+
+.button {
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.button:hover {
+  scale: 1.1;
+  opacity: 0.8;
+}
+
+@media (max-width: 1150px) {
+  .form__title {
+    font-size: 24px;
+  }
+  .input__name {
+    flex-direction: column;
+    gap: 0;
+    max-width: 100%;
+    &.firstname {
+      min-width: inherit;
+    }
+  }
+  .form__input {
+    padding: 10px 20px;
+  }
+  .submit__total p span {
+    font-size: 18px;
+  }
+  button {
+    padding: 10px 60px;
+  }
+}
+
+@media (max-width: 900px) {
+  .form {
+    margin: 30px 20px;
+  }
+.submit{
+  padding: 0 35px;
+}
+  .input__name {
+    flex-direction: column;
+  }
+
+  .form__container {
+    flex-direction: column;
+  }
+
+  .form__input {
+    max-width: 100%;
+    padding: 20px;
+  }
+}
